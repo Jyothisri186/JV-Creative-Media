@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JV Creative Media</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <style>
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightskyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        nav {
+            z-index: 50;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            background-color: lightskyblue;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: -30px;
+        }
+        .logo img {
+            height: 150px; /* Adjust the size of the logo */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .content {
+            margin-top: 30px; /* Adjust to avoid overlap with the nav */
+            color: black;
+        }
+        .content h1 {
+            font-size: 3.2em;
+            margin-bottom: 30px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 80px;
+        }
+        .service-item {
+            width:180px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .service-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .service-item img:hover {
+            transform: scale(1.2); /* Zoom effect on hover */
+        }
+        .service-item p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: black;
+        }
+        /* Underline effect when clicked */
+        nav ul li a:active {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: red;
+        }
+        /* Persistent underline for the active page */
+        /* Hover effect for navigation buttons */
+        nav ul li a:hover {
+            color: white;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="projects.html" class="active">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Our Services</h1>
+        <div class="services-container">
+            <!-- Video Editing -->
+            <div class="service-item" onclick="window.location.href='video-editing.html'">
+                <img src="img/video-editing.jpg" alt="Video Editing">
+                <p>Video Editing</p>
+            </div>
+            <!-- YouTube Thumbnails -->
+            <div class="service-item" onclick="window.location.href='youtube-thumbnails.html'">
+                <img src="img/youtube-thumbnails.jpg" alt="YouTube Thumbnails">
+                <p>YouTube Thumbnails</p>
+            </div>
+            <!-- Invitation Cards -->
+            <div class="service-item" onclick="window.location.href='invitation-cards.html'">
+                <img src="img/invitation-cards.jpg" alt="Invitation Cards">
+                <p>Invitation Cards</p>
+            </div>
+            <!-- Posters -->
+            <div class="service-item" onclick="window.location.href='posters.html'">
+                <img src="img/posters.jpg" alt="Posters">
+                <p>Posters</p>
+            </div>
+            <!-- Logo Design -->
+            <div class="service-item" onclick="window.location.href='logo-design.html'">
+                <img src="img/logo-design.jpg" alt="Logo Design">
+                <p>Logo Design</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

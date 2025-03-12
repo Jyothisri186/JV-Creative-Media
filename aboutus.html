@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JV Creative Media</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <style>
+        body, html {
+            height: 100%;
+            font-family:Arial, sans-serif; /* Changed to cursive */
+            margin: 0;
+            padding: 0;
+            background-color: lightskyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        nav {
+            z-index: 50;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            background-color: lightskyblue;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: -30px;
+        }
+        .logo img {
+            height: 150px; /* Adjust the size of the logo */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .right-text {
+            font-family: Arial, sans-serif ;
+            position: absolute;
+            top: 50%;
+            left: 550px;
+            transform: translateY(-50%);
+            font-size: 1.3em;
+            color: black;
+        }
+        .about-image {
+            width: 50%; /* Increase the width of the image container */
+            margin-right: 700px;
+            padding: 0px;
+        }
+        .about-image img {
+            width: 100%; /* Make the image fill the container */
+            height: 400px; /* Increase the height of the image */
+            object-fit: cover; /* Ensure the image scales properly */
+        }
+
+        /* Underline effect when clicked */
+        nav ul li a:active {
+            text-decoration: underline;
+            text-decoration-thickness: 2px; /* Thickness of the underline */
+            text-decoration-color: red; /* Color of the underline */
+        }
+
+        /* Persistent underline for the active page */
+        nav ul li a.active {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: red;
+        }
+
+        /* Hover effect for navigation buttons */
+        nav ul li a:hover {
+            color: white; /* Change text color to white on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" >
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="projects.html">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="img/about1.png" alt="Company Image">
+        </div>
+        <div class="right-text">
+            We are a dynamic creative hub where passion meets innovation. Our mission is to transform ideas into impactful visuals and memorable experiences that resonate with your audience. With an unwavering commitment to quality and attention to detail, we take pride in crafting unique and meaningful solutions tailored to your vision. Whether it’s conceptualizing a new project, enhancing your brand presence, or delivering exceptional creative outcomes, we pour our hearts into every step of the process. At JV Creative Media, collaboration fuels our creativity, and your satisfaction drives our success. Together, let’s create something extraordinary!
+        </div>
+    </div>
+
+    <script>
+        // Add active class to the clicked link
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+                // Add active class to the clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
