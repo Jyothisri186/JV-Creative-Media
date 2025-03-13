@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JV Creative Media</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: lightskyblue;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: black; /* Black horizontal line */
+            margin: 40px 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: -30px;
+            width: 100%;
+            background-color: lightskyblue;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-size: 1.3em; /* Increased text size */
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: lightskyblue;
+            color: black;
+            text-align: center;
+        }
+
+        .contact h2 {
+            
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: black;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact button:hover {
+            background: #ff4a3d;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: black;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff6f61;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="#home">
+                <img src="img/logo.png" alt="JV Creative Media Logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="projects.html">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        
+        <p>Want to create something amazing together?</p>
+        <p>Send "Hi" at <a href="mailto:contactjvcreativemedia@gmail.com" style="color: #ff6f61;">contactjvcreativemedia@gmail.com</a></p>
+        <form onsubmit="sendWhatsAppMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send A Nice Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/jv_creative_media?igsh=dTdqdnNwcjZ5NGdy" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:jvcreativemedia@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </section>
+    <script>
+        // WhatsApp message function
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create the WhatsApp message
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+            // Redirect to WhatsApp
+            window.open(`https://wa.me/919505812788?text=${whatsappMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+    
